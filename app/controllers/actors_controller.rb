@@ -6,6 +6,6 @@ class ActorsController < ApplicationController
     # return RedirectToAction("Show", "MoviesController")
     # @Html.ActionLink("/movies/:id", "Show", "MoviesController", null, null)
     @actor.save!
-    redirect_to :controller => 'MoviesController', :action => "get"
+    redirect_to action: "show", controller: 'movies'
   end
 end

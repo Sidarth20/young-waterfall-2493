@@ -55,8 +55,8 @@ RSpec.describe Movie do
       expect(page).to have_content(actor_4.name)
       expect(page).to_not have_content(actor_3.name)
 
-      click_link('Add an Actor')
-      visit "/actors/new"
+      # click_link('Add an Actor')
+      # visit "/actors/new"
 
       fill_in('name', with: 'John Rhys-Davies')
       click_button('Submit')

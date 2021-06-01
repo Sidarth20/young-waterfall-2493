@@ -8,6 +8,6 @@ class MoviesController < ApplicationController
     @actor = Actor.create!(
       name: params[:name]
     )
-    redirect_to "/movies/#{@movie.id}"
+    redirect_to "/movies/#{@movie}"
   end
 end

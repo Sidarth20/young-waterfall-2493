@@ -7,4 +7,12 @@
   <p> Actor: <%= actor.name %> </p>
 <% end %>
 
-<%= link_to "Add an Actor", "/actors/new" %>
+<%# <%= link_to "Add an Actor", "/actors/new" %> %>
+
+<%= form_with url: '/movies', method: :post, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <br>
+  <br>
+  <%= form.submit "Submit" %>
+<% end %>
