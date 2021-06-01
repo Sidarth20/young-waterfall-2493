@@ -1,7 +1,6 @@
-class MoviesController < ApplicationController
+class ActorsController < ApplicationController
   def show
     @movie = Movie.find(params[:id])
-    @actor = @movie.actors
   end
 
   def create

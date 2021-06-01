@@ -6,3 +6,5 @@
 <% @movie.actors.each do |actor|  %>
   <p> Actor: <%= actor.name %> </p>
 <% end %>
+
+<%= link_to "Add an Actor", "/actors/new" %>

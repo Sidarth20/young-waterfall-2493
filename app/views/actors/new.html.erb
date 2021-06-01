@@ -1,0 +1,7 @@
+<%= form_with url: '/actors', method: :post, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <br>
+  <br>
+  <%= form.submit "Submit" %>
+<% end %>
