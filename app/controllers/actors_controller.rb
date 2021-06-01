@@ -1,12 +1,11 @@
 class ActorsController < ApplicationController
-  def show
-    @movie = Movie.find(params[:id])
-  end
-
   def create
     @actor = Actor.create!(
       name: params[:name]
     )
-    redirect_to "/movies/#{@movie.id}"
+    # return RedirectToAction("Show", "MoviesController")
+    # @Html.ActionLink("/movies/:id", "Show", "MoviesController", null, null)
+    @actor.save!
+    redirect_to :controller => 'MoviesController', :action => "get"
   end
 end
