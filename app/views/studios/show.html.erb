@@ -4,4 +4,12 @@
 <h3>Movie Titles</h3>
 <% @studio.movies.each do |movie|  %>
   <p> <%= movie.title %> </p>
+
+  <% movie.actors.actor_list.each do |actor| %>
+  <ol>
+    <li> Name: <%= actor.name %> </li>
+    <li> Age: <%= actor.age %> </li>
+    <li> Currently Working? <%= actor.currently_working %> </li>
+  </ol>
+  <% end %>
 <% end %>
